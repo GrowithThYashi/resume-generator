@@ -1,0 +1,1851 @@
+/* ============================= */
+/* BASIC RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* PAGE */
+/* ============================= */
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f5f5f3;
+    color: #171717;
+    padding: 40px 20px;
+}
+
+
+/* ============================= */
+/* MAIN */
+/* ============================= */
+
+main {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+/* ============================= */
+/* SCREEN 1 */
+/* ============================= */
+
+#welcomeScreen {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ============================= */
+/* SCREEN 1 HEADER */
+/* ============================= */
+
+#welcomeScreen header h1 {
+    font-size: 46px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+#welcomeScreen header h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#welcomeScreen header h3 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #666;
+}
+
+
+/* ============================= */
+/* RESUME PREVIEW */
+/* ============================= */
+
+.resume-preview {
+    display: flex;
+    justify-content: center;
+
+    margin: 40px 0 30px;
+}
+
+.resume-paper {
+    width: 330px;
+    min-height: 420px;
+
+    background: white;
+
+    padding: 35px 32px;
+
+    text-align: left;
+
+    border-radius: 4px;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ============================= */
+/* RESUME CONTENT */
+/* ============================= */
+
+.resume-paper h4 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.resume-role {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h5 {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.resume-section hr {
+    border: none;
+    border-top: 1px solid #dcdcdc;
+}
+
+
+/* ============================= */
+/* DESCRIPTION */
+/* ============================= */
+
+.intro p {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #666;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button {
+    border: none;
+
+    background: #171717;
+    color: white;
+
+    padding: 15px 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ============================= */
+/* SCREEN 1 FOOTER */
+/* ============================= */
+
+#welcomeScreen footer {
+    margin-top: 28px;
+}
+
+#welcomeScreen footer p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+
+/* ============================= */
+/* SCREEN 2 */
+/* ============================= */
+
+#personalScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* FORM TOP */
+/* ============================= */
+
+.form-header {
+    width: 100%;
+}
+
+.form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.form-top h1 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.form-top p {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+
+/* ============================= */
+/* PROGRESS BAR */
+/* ============================= */
+
+.progress {
+    display: flex;
+    gap: 7px;
+
+    width: 100%;
+}
+
+.progress span {
+    height: 4px;
+
+    flex: 1;
+
+    background: #dedede;
+
+    border-radius: 10px;
+}
+
+.progress span.active {
+    background: #171717;
+}
+
+
+/* ============================= */
+/* FORM INTRO */
+/* ============================= */
+
+.form-intro {
+    text-align: center;
+
+    margin: 65px 0 35px;
+}
+
+.form-intro h2 {
+    font-size: 34px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.form-intro p {
+    font-size: 16px;
+    color: #777;
+}
+
+
+/* ============================= */
+/* FORM CONTAINER */
+/* ============================= */
+
+.form-container {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================= */
+/* FORM GROUP */
+/* ============================= */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 7px;
+
+    background: #fafafa;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input:focus {
+    background: white;
+
+    border-color: #171717;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+
+/* ============================= */
+/* FORM BUTTONS */
+/* ============================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 35px;
+}
+
+.form-buttons button {
+    min-width: 120px;
+}
+
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+#backToWelcome {
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px solid #d5d5d5;
+}
+
+#backToWelcome:hover {
+    background: #f5f5f3;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* SCREEN 3 */
+/* ============================= */
+
+#summaryScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* SUMMARY TEXTAREA */
+/* ============================= */
+
+.form-group textarea {
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 15px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 7px;
+
+    background: #fafafa;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group textarea:focus {
+    background: white;
+
+    border-color: #171717;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* ============================= */
+/* CHARACTER COUNT */
+/* ============================= */
+
+.character-count {
+    text-align: right;
+
+    margin-top: 7px;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+/* ============================= */
+/* SCREEN 4 */
+/* ============================= */
+
+#educationScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* SCREEN 5 */
+/* ============================= */
+
+#skillsScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* ADD SKILL BUTTON */
+/* ============================= */
+
+.add-skill-button {
+    width: 100%;
+
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px dashed #cfcfcf;
+
+    padding: 13px;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-top: 2px;
+
+    margin-bottom: 10px;
+
+    box-shadow: none;
+}
+
+.add-skill-button:hover {
+    background: #f5f5f3;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* SKILL GROUP SPACING */
+/* ============================= */
+
+.skill-group {
+    margin-bottom: 18px;
+}
+
+
+/* ============================= */
+/* SCREEN 6 */
+/* ============================= */
+
+#experienceScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* EXPERIENCE OPTION */
+/* ============================= */
+
+.experience-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    padding: 14px;
+
+    background: #f5f5f3;
+
+    border-radius: 7px;
+}
+
+.experience-option input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.experience-option label {
+    font-size: 13px;
+
+    color: #444;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* EXPERIENCE DATES */
+/* ============================= */
+
+.experience-dates {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* ============================= */
+/* DISABLED EXPERIENCE */
+/* ============================= */
+
+#experienceFields.disabled {
+    opacity: 0.45;
+
+    pointer-events: none;
+}
+
+
+/* ============================= */
+/* SCREEN 7 : CERTIFICATIONS */
+/* ============================= */
+
+#certificationScreen {
+    display: none;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+
+/* ============================= */
+/* CERTIFICATION QUESTION */
+/* ============================= */
+
+.certification-question {
+    margin-bottom: 30px;
+}
+
+.certification-question p {
+    font-size: 15px;
+
+    color: #444;
+
+    margin-bottom: 18px;
+}
+
+
+/* ============================= */
+/* YES / NO BUTTONS */
+/* ============================= */
+
+.certification-choice {
+    display: flex;
+
+    gap: 18px;
+}
+
+.certification-choice button {
+    min-width: 130px;
+}
+
+
+/* ============================= */
+/* CERTIFICATION FIELDS */
+/* ============================= */
+
+.certification-fields {
+    display: none;
+}
+
+
+/* ============================= */
+/* ADD CERTIFICATION */
+/* ============================= */
+
+.add-certification-button {
+    background: white;
+
+    color: #171717;
+
+    border: 1px solid #171717;
+
+    margin-top: 5px;
+}
+
+.add-certification-button:hover {
+    background: #f5f5f3;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* NO CERTIFICATION MESSAGE */
+/* ============================= */
+
+.no-certification-message {
+    display: none;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+
+/* ============================= */
+/* SELECTED YES / NO */
+/* ============================= */
+
+.certification-choice button.selected {
+    background: #171717;
+
+    color: white;
+}
+
+
+/* ============================= */
+/* CERTIFICATION ENTRY */
+/* ============================= */
+
+.certification-entry {
+    position: relative;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    background: #fafafa;
+}
+
+
+/* ============================= */
+/* CERTIFICATION ENTRY HEADER */
+/* ============================= */
+
+.certification-entry-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.certification-entry-header span {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #555;
+}
+
+
+/* ============================= */
+/* REMOVE CERTIFICATION */
+/* ============================= */
+
+.remove-certification {
+    min-width: auto !important;
+
+    width: 28px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.remove-certification:hover {
+    background: #eeeeee;
+
+    color: #171717;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* EDUCATION */
+/* ============================= */
+
+.education-entry {
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    background: #fafafa;
+}
+
+.education-entry + .education-entry {
+    margin-top: 20px;
+}
+
+
+/* ============================= */
+/* EDUCATION SELECT */
+/* ============================= */
+
+.education-type {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    color: #171717;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* OTHER EDUCATION */
+/* ============================= */
+
+.other-education-group {
+    margin-top: 18px;
+}
+
+
+/* ============================= */
+/* EDUCATION DETAILS */
+/* ============================= */
+
+.education-details {
+    margin-top: 18px;
+}
+
+
+/* ============================= */
+/* STILL STUDYING */
+/* ============================= */
+
+.education-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+
+    padding: 12px;
+
+    background: #f5f5f3;
+
+    border-radius: 7px;
+}
+
+.education-option input {
+    width: 16px;
+
+    height: 16px;
+
+    cursor: pointer;
+}
+
+.education-option label {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #444;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* ADD QUALIFICATION */
+/* ============================= */
+
+.add-qualification-button {
+    width: 100%;
+
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px dashed #cfcfcf;
+
+    padding: 13px;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-top: 2px;
+
+    margin-bottom: 10px;
+
+    box-shadow: none;
+}
+
+.add-qualification-button:hover {
+    background: #f5f5f3;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* REMOVE QUALIFICATION */
+/* ============================= */
+
+.remove-qualification {
+    min-width: auto !important;
+
+    width: 28px;
+
+    height: 28px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.remove-qualification:hover {
+    background: #eeeeee;
+
+    color: #171717;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* ============================= */
+/* RESUME GENERATED SCREEN */
+/* ============================= */
+
+#resumeReadyScreen {
+    min-height: calc(100vh - 80px);
+
+    padding: 20px 0 50px;
+}
+
+#resumeReadyScreen .form-container {
+    max-width: 600px;
+
+    margin: 35px auto 0;
+}
+
+#resumeReadyScreen .action {
+    display: flex;
+
+    justify-content: center;
+}
+
+#resumeReadyScreen .form-buttons {
+    margin-top: 30px;
+}
+
+#resumeReadyScreen #backToCertification {
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px solid #d5d5d5;
+}
+
+#resumeReadyScreen #backToCertification:hover {
+    background: #f5f5f3;
+
+    box-shadow: none;
+}
+
+
+/* ========================================================= */
+/* GENERATED RESUME PREVIEW */
+/* ========================================================= */
+
+#resumePreviewScreen {
+
+    min-height: calc(100vh - 80px);
+
+    padding: 30px 0 70px;
+}
+
+
+/* ========================================================= */
+/* PREVIEW TITLE */
+/* ========================================================= */
+
+#resumePreviewScreen > .form-intro {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+#resumePreviewScreen > .form-intro h2 {
+
+    font-size: 30px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+#resumePreviewScreen > .form-intro p {
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ========================================================= */
+/* A4 RESUME PAPER */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-preview {
+
+    width: 794px;
+
+    min-height: 1123px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding: 55px 60px;
+
+    border: 1px solid #dddddd;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.14);
+
+    text-align: left;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+   grid-template-areas:
+
+    "header header"
+
+    "summary skills"
+
+    "education experience"
+
+    "education certification";
+
+    column-gap: 45px;
+
+    row-gap: 30px;
+
+    align-items: start;
+
+    align-content: start;
+}
+
+
+/* ========================================================= */
+/* HEADER */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-header {
+
+    grid-area: header;
+
+    text-align: left;
+
+    padding-bottom: 25px;
+
+    border-bottom: 2px solid #171717;
+
+    margin-bottom: 0;
+
+    align-self: start;
+
+    height: auto;
+}
+
+
+#resumePreviewScreen #previewName {
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 7px;
+
+    color: #171717;
+}
+
+
+#resumePreviewScreen #previewRole {
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    color: #666;
+
+    margin-bottom: 14px;
+}
+
+
+#resumePreviewScreen #previewContact {
+
+    font-size: 14px;
+
+    color: #555;
+
+    line-height: 2;
+}
+
+
+/* ========================================================= */
+/* RESUME SECTIONS */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section {
+
+    margin: 0;
+
+    padding: 0;
+
+    align-self: start;
+
+    height: auto;
+}
+
+
+/* ========================================================= */
+/* SUMMARY */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section:nth-of-type(1) {
+
+    grid-area: summary;
+}
+
+
+/* ========================================================= */
+/* EDUCATION */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section:nth-of-type(2) {
+
+    grid-area: education;
+}
+
+
+/* ========================================================= */
+/* SKILLS */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section:nth-of-type(3) {
+
+    grid-area: skills;
+}
+
+
+/* ========================================================= */
+/* EXPERIENCE */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section:nth-of-type(4) {
+
+    grid-area: experience;
+}
+
+
+/* ========================================================= */
+/* CERTIFICATIONS */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section:nth-of-type(5) {
+
+    grid-area: certification;
+}
+
+
+/* ========================================================= */
+/* SECTION HEADINGS */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section h3 {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+
+    color: #171717;
+}
+
+
+/* ========================================================= */
+/* LINE UNDER SECTION HEADING */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section h3::after {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #d7d7d7;
+
+    margin-top: 7px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ========================================================= */
+/* SECTION CONTENT */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-section > p,
+#resumePreviewScreen .resume-section > div {
+
+    font-size: 12.5px;
+
+    line-height: 1.65;
+
+    color: #444;
+}
+
+
+/* ========================================================= */
+/* EDUCATION */
+/* ========================================================= */
+
+#resumePreviewScreen #previewEducation {
+
+    line-height: 1.7;
+}
+
+
+/* ========================================================= */
+/* SKILLS */
+/* ========================================================= */
+
+#resumePreviewScreen #previewSkills {
+
+    line-height: 1.9;
+}
+
+
+/* ========================================================= */
+/* EXPERIENCE */
+/* ========================================================= */
+
+#resumePreviewScreen #previewExperience {
+
+    line-height: 1.7;
+}
+
+
+/* ========================================================= */
+/* CERTIFICATIONS */
+/* ========================================================= */
+
+#resumePreviewScreen #previewCertification {
+
+    line-height: 1.7;
+}
+
+
+/* ========================================================= */
+/* SUMMARY */
+/* ========================================================= */
+
+#resumePreviewScreen #previewSummary {
+
+    line-height: 1.75;
+}
+
+
+/* ========================================================= */
+/* MOBILE */
+/* ========================================================= */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 40px 35px;
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+
+            "header"
+
+            "education"
+
+            "summary"
+
+            "skills"
+
+            "experience"
+
+            "certification";
+
+        row-gap: 28px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    #resumePreviewScreen {
+
+        padding: 20px 0 40px;
+    }
+
+
+    #resumePreviewScreen .resume-preview {
+
+        padding: 30px 25px;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+
+
+    #resumePreviewScreen #previewName {
+
+        font-size: 27px;
+    }
+
+
+    #resumePreviewScreen #previewRole {
+
+        font-size: 15px;
+    }
+
+
+    #resumePreviewScreen #previewContact {
+
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+
+    #resumePreviewScreen .resume-section h3 {
+
+        font-size: 12px;
+    }
+
+
+    #resumePreviewScreen .resume-section > p,
+    #resumePreviewScreen .resume-section > div {
+
+        font-size: 12px;
+    }
+}
+/* ========================================================= */
+/* FINAL RESUME SECTION LAYOUT */
+/* ========================================================= */
+
+/* MAIN RESUME GRID */
+
+#resumePreviewScreen .resume-preview {
+
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+    grid-template-areas:
+
+        "header header"
+
+        "education skills"
+
+        "summary experience"
+
+        "summary certification";
+
+    column-gap: 45px;
+
+    row-gap: 30px;
+
+    align-items: start;
+
+    align-content: start;
+}
+
+
+/* HEADER */
+
+#resumePreviewScreen .resume-header {
+    grid-area: header;
+}
+
+
+/* EDUCATION → LEFT */
+
+#resumePreviewScreen .resume-section:has(#previewEducation) {
+    grid-area: education;
+}
+
+
+/* SUMMARY → LEFT, BELOW EDUCATION */
+
+#resumePreviewScreen .resume-section:has(#previewSummary) {
+    grid-area: summary;
+}
+
+
+/* SKILLS → RIGHT */
+
+#resumePreviewScreen .resume-section:has(#previewSkills) {
+    grid-area: skills;
+}
+
+
+/* EXPERIENCE → RIGHT */
+
+#resumePreviewScreen .resume-section:has(#previewExperience) {
+    grid-area: experience;
+}
+
+
+/* CERTIFICATIONS → RIGHT, BELOW EXPERIENCE */
+
+#resumePreviewScreen .resume-section:has(#previewCertification) {
+    grid-area: certification;
+}
+
+
+/* KEEP EVERYTHING COMPACT */
+
+#resumePreviewScreen .resume-section {
+    align-self: start;
+    height: auto;
+    margin: 0;
+}
+
+
+/* ========================================================= */
+/* MOBILE */
+/* ========================================================= */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+
+            "header"
+
+            "education"
+
+            "summary"
+
+            "skills"
+
+            "experience"
+
+            "certification";
+    }
+}
+/* ========================================================= */
+/* FINAL FIX — RESUME SECTION POSITIONS */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-preview {
+
+    display: grid;
+
+    grid-template-columns: 1.7fr 1fr;
+
+    grid-template-areas:
+
+        "header header"
+
+        "summary skills"
+
+        "education experience";
+
+    column-gap: 45px;
+
+    row-gap: 30px;
+
+    align-items: start;
+
+    align-content: start;
+}
+
+
+/* PROFILE */
+
+#resumePreviewScreen .resume-preview > .resume-header {
+    grid-area: header;
+}
+
+
+/* SUMMARY — LEFT, FIRST */
+
+#resumePreviewScreen .resume-preview > .resume-section:nth-child(2) {
+    grid-area: summary;
+}
+
+
+/* EDUCATION — LEFT, SECOND */
+
+#resumePreviewScreen .resume-preview > .resume-section:nth-child(3) {
+    grid-area: education;
+}
+
+
+/* SKILLS — RIGHT, FIRST */
+
+#resumePreviewScreen .resume-preview > .resume-section:nth-child(4) {
+    grid-area: skills;
+}
+
+
+/* EXPERIENCE — RIGHT, SECOND */
+
+#resumePreviewScreen .resume-preview > .resume-section:nth-child(5) {
+    grid-area: experience;
+}
+
+
+/* KEEP SECTIONS COMPACT */
+
+#resumePreviewScreen .resume-section {
+    align-self: start;
+    height: auto;
+    margin: 0;
+}
+
+
+/* ========================================================= */
+/* MOBILE */
+/* ========================================================= */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+
+            "header"
+
+            "summary"
+
+            "education"
+
+            "skills"
+
+            "experience";
+    }
+}
+/* ========================================================= */
+/* CERTIFICATIONS — RIGHT COLUMN BELOW EXPERIENCE */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-preview {
+
+    grid-template-areas:
+
+        "header header"
+
+        "summary skills"
+
+        "education experience"
+
+        ". certifications";
+}
+
+
+/* CERTIFICATIONS */
+
+#resumePreviewScreen .resume-preview > .resume-section:nth-child(6) {
+
+    grid-area: certifications;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        grid-template-areas:
+
+            "header"
+
+            "summary"
+
+            "education"
+
+            "skills"
+
+            "experience"
+
+            "certifications";
+    }
+
+}
+/* ========================================================= */
+/* RESUME PREVIEW — FINAL VISUAL SPACING */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-preview {
+
+    align-content: start;
+
+    row-gap: 42px;
+
+}
+
+
+/* PROFILE */
+
+#resumePreviewScreen .resume-header {
+
+    padding-bottom: 30px;
+
+}
+
+
+/* RESUME SECTIONS */
+
+#resumePreviewScreen .resume-section {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+/* SECTION CONTENT */
+
+#resumePreviewScreen .resume-section p,
+#resumePreviewScreen .resume-section div {
+
+    line-height: 1.85;
+
+}
+
+
+/* EDUCATION / EXPERIENCE / CERTIFICATIONS CONTENT */
+
+#resumePreviewScreen .resume-section {
+
+    line-height: 1.85;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        row-gap: 30px;
+
+    }
+
+}
+/* ========================================================= */
+/* RESUME PREVIEW — CLEAN BALANCED SPACING */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-preview {
+
+    align-content: start;
+
+    row-gap: 42px;
+
+}
+
+
+/* KEEP EACH SECTION COMPACT */
+
+#resumePreviewScreen .resume-section {
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* PROFILE */
+
+#resumePreviewScreen .resume-header {
+
+    padding-bottom: 30px;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    #resumePreviewScreen .resume-preview {
+
+        align-content: start;
+        row-gap: 30px;
+
+    }
+
+}
+/* ========================================================= */
+/* RESUME PREVIEW — PROFILE PICTURE */
+/* ========================================================= */
+
+#resumePreviewScreen .resume-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+}
+
+
+#resumePreviewScreen .resume-profile-details {
+
+    flex: 1;
+
+}
+
+
+#resumePreviewScreen .preview-picture-box {
+
+    width: 115px;
+
+    height: 145px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #d8d8d8;
+
+}
+
+
+#resumePreviewScreen .preview-picture-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+/* ============================= */
+/* DOWNLOAD RESUME BUTTON */
+/* ============================= */
+
+.resume-download-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#downloadResumePNG {
+    min-width: 240px;
+}

@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Builder</title>
+
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+
+    <main>
+
+        <!-- ========================= -->
+        <!-- SCREEN 1 : WELCOME -->
+        <!-- ========================= -->
+
+        <section id="welcomeScreen">
+
+            <header>
+                <h1>RESUME BUILDER</h1>
+
+                <h2>Build your resume.</h2>
+                <h3>Show your journey.</h3>
+            </header>
+
+
+            <!-- Resume Preview -->
+
+            <section class="resume-preview">
+
+                <div class="resume-paper">
+
+                    <h4>YOUR NAME</h4>
+
+                    <p class="resume-role">
+                        Student / Developer
+                    </p>
+
+                    <div class="resume-section">
+                        <h5>PROFILE</h5>
+                        <hr>
+                    </div>
+
+                    <div class="resume-section">
+                        <h5>EDUCATION</h5>
+                        <hr>
+                    </div>
+
+                    <div class="resume-section">
+                        <h5>SKILLS</h5>
+                        <hr>
+                    </div>
+
+                    <div class="resume-section">
+                        <h5>PROJECTS</h5>
+                        <hr>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Description -->
+
+            <section class="intro">
+
+                <p>
+                    Create a clean, professional student
+                    resume in a few simple steps.
+                </p>
+
+            </section>
+
+
+            <!-- Create Button -->
+
+            <section class="action">
+
+                <button id="createResume">
+                    CREATE RESUME →
+                </button>
+
+            </section>
+
+
+            <footer>
+
+                <p>Simple • Fast • Clean</p>
+
+            </footer>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- SCREEN 2 : PERSONAL INFO -->
+        <!-- ========================= -->
+
+        <section id="personalScreen">
+
+            <!-- Top -->
+
+            <header class="form-header">
+
+                <div class="form-top">
+
+                    <h1>RESUME BUILDER</h1>
+
+                    <p>STEP 1 OF 7</p>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="progress">
+
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- Form Heading -->
+
+            <section class="form-intro">
+
+                <h2>Personal Information</h2>
+
+                <p>
+                    Let's start with the basics.
+                </p>
+
+            </section>
+
+
+
+            <!-- Personal Information Form -->
+
+            <section class="form-container">
+
+                <form id="personalForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Role -->
+
+                    <div class="form-group">
+
+                        <label for="role">
+                            Role / Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="role"
+                            placeholder="Example: Student / Web Developer"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Phone -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Location -->
+
+                    <div class="form-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Example: Bhopal, India"
+                        >
+
+                    </div>
+
+
+
+                    <!-- LinkedIn -->
+
+                    <div class="form-group">
+
+                        <label for="linkedin">
+                            LinkedIn
+                        </label>
+
+                        <input
+                            type="text"
+                            id="linkedin"
+                            placeholder="Paste your LinkedIn profile"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Navigation -->
+
+                    <div class="form-buttons">
+
+                        <button
+                            type="button"
+                            id="backToWelcome">
+                            ← BACK
+                        </button>
+
+                        <button
+                            type="button"
+                            id="nextToSummary">
+                            NEXT →
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+        </section>
+        <!-- ========================= -->
+<!-- SCREEN 3 : SUMMARY -->
+<!-- ========================= -->
+
+<section id="summaryScreen">
+
+    <header class="form-header">
+
+        <div class="form-top">
+
+            <h1>RESUME BUILDER</h1>
+
+            <p>STEP 2 OF 7</p>
+
+        </div>
+
+        <div class="progress">
+
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Summary Heading -->
+
+    <section class="form-intro">
+
+        <h2>Profile / Summary</h2>
+
+        <p>
+            Tell your story briefly.
+        </p>
+
+    </section>
+
+
+    <!-- Summary Form -->
+
+    <section class="form-container">
+
+        <form id="summaryForm">
+
+            <div class="form-group">
+
+                <label for="summary">
+                    Your Summary
+                </label>
+
+                <textarea
+                    id="summary"
+                    maxlength="300"
+                    placeholder="Example: I am a student learning web development and building practical projects to improve my skills."
+                ></textarea>
+
+                <div class="character-count">
+                    <span id="summaryCount">0</span> / 300
+                </div>
+
+            </div>
+            <!-- PROFILE PICTURE -->
+
+<div class="form-group profile-picture-group">
+
+    <label for="profilePicture">
+        Add your picture
+    </label>
+
+    <input
+        type="file"
+        id="profilePicture"
+        accept="image/*"
+    >
+
+</div>
+
+
+            <!-- Navigation -->
+
+            <div class="form-buttons">
+
+                <button
+                    type="button"
+                    id="backToPersonal">
+                    ← BACK
+                </button>
+
+                <button
+                    type="button"
+                    id="nextToEducation">
+                    NEXT →
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</section>
+
+<!-- ========================= -->
+<!-- SCREEN 4 : EDUCATION -->
+<!-- ========================= -->
+
+<section id="educationScreen">
+
+    <header class="form-header">
+
+        <div class="form-top">
+            <h1>RESUME BUILDER</h1>
+            <p>STEP 3 OF 7</p>
+        </div>
+
+        <div class="progress">
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <section class="form-intro">
+
+        <h2>Education</h2>
+
+        <p>
+            Add your educational qualifications.
+        </p>
+
+    </section>
+
+
+    <section class="form-container">
+
+        <form id="educationForm">
+
+
+            <!-- EDUCATION ENTRIES -->
+
+            <div id="educationList">
+
+
+                <!-- FIRST EDUCATION ENTRY -->
+
+                <div class="education-entry">
+
+                    <div class="form-group">
+
+                        <label>
+                            Education / Qualification
+                        </label>
+
+                        <select class="education-type">
+
+                            <option value="">
+                                Select qualification
+                            </option>
+
+                            <option value="UG / Bachelor's Degree">
+                                UG / Bachelor's Degree
+                            </option>
+
+                            <option value="PG / Master's Degree">
+                                PG / Master's Degree
+                            </option>
+
+                            <option value="10th">
+                                10th
+                            </option>
+
+                            <option value="12th">
+                                12th
+                            </option>
+
+                            <option value="Diploma">
+                                Diploma
+                            </option>
+
+                            <option value="Polytechnic">
+                                Polytechnic
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+                    <!-- BRANCH / SPECIALIZATION -->
+
+<div
+    class="form-group specialization-group"
+    style="display: none;"
+>
+
+    <label>
+        Branch / Specialization
+    </label>
+
+    <input
+        type="text"
+        class="specialization"
+        placeholder="Example: Computer Science & Engineering"
+    >
+
+</div>
+
+
+                    <!-- OTHER EDUCATION -->
+
+                    <div
+                        class="form-group other-education-group"
+                        style="display: none;"
+                    >
+
+                        <label>
+                            Enter your education
+                        </label>
+
+                        <input
+                            type="text"
+                            class="other-education"
+                            placeholder="Example: BCA / Advanced Diploma"
+                        >
+
+                    </div>
+                    <!-- DEGREE / PROGRAM -->
+
+<div
+    class="form-group degree-group"
+    style="display: none;"
+>
+
+    <label>
+        Degree / Program
+    </label>
+
+    <select class="degree-program">
+
+        <option value="">
+            Select degree / program
+        </option>
+
+    </select>
+
+</div>
+
+
+                    <!-- SCHOOL / UNIVERSITY -->
+
+                    <div class="form-group education-details">
+
+                        <label>
+                            School / University
+                        </label>
+
+                        <input
+                            type="text"
+                            class="school-university"
+                            placeholder="Enter school or university"
+                        >
+
+                    </div>
+
+
+                    <!-- PERCENTAGE / GPA -->
+
+                    <div class="form-group education-details">
+
+                        <label>
+                            Percentage / GPA
+                        </label>
+
+                        <input
+                            type="text"
+                            class="percentage-gpa"
+                            placeholder="Example: 85% / 8.5 GPA"
+                        >
+
+                    </div>
+
+
+                    <!-- STILL STUDYING -->
+
+                    <div class="education-option education-details">
+
+                        <input
+                            type="checkbox"
+                            class="still-studying"
+                        >
+
+                        <label>
+                            I am still studying
+                        </label>
+
+                    </div>
+
+
+                    <!-- COMPLETION YEAR -->
+
+                    <div class="form-group education-details completion-group">
+
+                        <label class="completion-label">
+                            Year of Completion
+                        </label>
+
+                        <input
+                            type="text"
+                            class="completion-year"
+                            placeholder="Example: 2027"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADD ANOTHER EDUCATION -->
+
+            <button
+                type="button"
+                id="addQualification"
+                class="add-qualification-button"
+            >
+                + ADD ANOTHER EDUCATION
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="form-buttons">
+
+                <button
+                    type="button"
+                    id="backToSummary"
+                >
+                    ← BACK
+                </button>
+
+                <button
+                    type="button"
+                    id="nextToSkills"
+                >
+                    NEXT →
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </section>
+
+</section>
+       
+<!-- ========================= -->
+<!-- SCREEN 5 : SKILLS -->
+<!-- ========================= -->
+
+<section id="skillsScreen">
+
+    <header class="form-header">
+
+        <div class="form-top">
+
+            <h1>RESUME BUILDER</h1>
+
+            <p>STEP 4 OF 7</p>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress">
+
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Heading -->
+
+    <section class="form-intro">
+
+        <h2>Skills</h2>
+
+        <p>
+            What can you work with?
+        </p>
+
+    </section>
+
+
+    <!-- Skills Form -->
+
+    <section class="form-container">
+
+        <form id="skillsForm">
+
+            <div id="skillsList">
+
+                <!-- First Skill -->
+
+                <div class="form-group skill-group">
+
+                    <label>
+                        Skill
+                    </label>
+
+                    <input
+                        type="text"
+                        class="skill-input"
+                        placeholder="Example: HTML"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Add Skill -->
+
+            <button
+                type="button"
+                id="addSkill"
+                class="add-skill-button">
+
+                + ADD ANOTHER SKILL
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <div class="form-buttons">
+
+                <button
+                    type="button"
+                    id="backToEducation">
+
+                    ← BACK
+
+                </button>
+
+                <button
+                    type="button"
+                    id="nextToProjects">
+
+                    NEXT →
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</section>
+<!-- ========================= -->
+<!-- SCREEN 6 : EXPERIENCE -->
+<!-- ========================= -->
+
+<section id="experienceScreen">
+
+    <header class="form-header">
+
+        <div class="form-top">
+
+            <h1>RESUME BUILDER</h1>
+
+            <p>STEP 5 OF 6</p>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress">
+
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Heading -->
+
+    <section class="form-intro">
+
+        <h2>Experience</h2>
+
+        <p>
+            Add your work or internship experience.
+        </p>
+
+    </section>
+
+
+    <!-- Experience Form -->
+
+    <section class="form-container">
+
+        <form id="experienceForm">
+
+
+            <!-- No Experience -->
+
+            <div class="experience-option">
+
+                <input
+                    type="checkbox"
+                    id="noExperience"
+                >
+
+                <label for="noExperience">
+                    I don't have experience yet
+                </label>
+
+            </div>
+
+
+            <!-- Experience Fields -->
+
+            <div id="experienceFields">
+
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label for="experienceRole">
+                        Role / Position
+                    </label>
+
+                    <input
+                        type="text"
+                        id="experienceRole"
+                        placeholder="Example: Web Development Intern"
+                    >
+
+                </div>
+
+
+                <!-- Organization -->
+
+                <div class="form-group">
+
+                    <label for="organization">
+                        Organization
+                    </label>
+
+                    <input
+                        type="text"
+                        id="organization"
+                        placeholder="Example: ABC Company"
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="experienceDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="experienceDescription"
+                        placeholder="Describe what you worked on..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Dates -->
+
+                <div class="experience-dates">
+
+                    <div class="form-group">
+
+                        <label for="startYear">
+                            Start Year
+                        </label>
+
+                        <input
+                            type="text"
+                            id="startYear"
+                            placeholder="2025"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="endYear">
+                            End Year
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endYear"
+                            placeholder="2026"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <div class="form-buttons">
+
+                <button
+                    type="button"
+                    id="backToSkills">
+
+                    ← BACK
+
+                </button>
+
+                <button
+                    type="button"
+                    id="nextToCertifications">
+
+                    NEXT →
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</section>
+
+    </section>
+
+<!-- ========================= -->
+<!-- SCREEN 7 : CERTIFICATIONS -->
+<!-- ========================= -->
+
+<section id="certificationScreen">
+
+    <header class="form-header">
+
+        <div class="form-top">
+
+            <h1>RESUME BUILDER</h1>
+
+            <p>STEP 6 OF 6</p>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress">
+
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+            <span class="active"></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- Heading -->
+
+    <section class="form-intro">
+
+        <h2>Certifications</h2>
+
+        <p>
+            Add certifications to your resume
+            (Optional — you can skip this step)
+        </p>
+
+    </section>
+
+
+    <!-- Certification Form -->
+
+    <section class="form-container">
+
+        <form id="certificationForm">
+
+
+            <!-- Certification Question -->
+
+            <div class="certification-question">
+
+                <p>
+                    Do you have any certifications?
+                </p>
+
+
+                <div class="certification-choice">
+
+                    <button
+                        type="button"
+                        id="certificationYes">
+
+                        YES
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="certificationNo">
+
+                        NO
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Certification Fields -->
+
+            <div
+                id="certificationFields"
+                class="certification-fields">
+
+                <div class="form-group">
+
+                    <label for="certificateName">
+                        Certificate Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certificateName"
+                        placeholder="Example: Responsive Web Design"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="issuingOrganization">
+                        Issuing Organization
+                    </label>
+
+                    <input
+                        type="text"
+                        id="issuingOrganization"
+                        placeholder="Example: freeCodeCamp"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="certificateYear">
+                        Year
+                    </label>
+
+                    <input
+                        type="text"
+                        id="certificateYear"
+                        placeholder="2026"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addCertification"
+                    class="add-certification-button">
+
+                    + ADD ANOTHER CERTIFICATION
+
+                </button>
+
+            </div>
+
+
+            <!-- No Certification Message -->
+
+            <p
+                id="noCertificationMessage"
+                class="no-certification-message">
+
+                No certification details required.
+                You can continue directly.
+
+            </p>
+
+
+            <!-- Navigation -->
+
+            <div class="form-buttons">
+
+    <button
+        type="button"
+        id="backToExperience">
+
+        ← BACK
+
+    </button>
+
+
+    <button
+        type="button"
+        id="generateResume"
+        style="display: none;">
+
+        GENERATE RESUME →
+
+    </button>
+
+</div>
+        </form>
+
+    </section>
+
+</section>
+<section id="resumeReadyScreen" style="display: none;">
+
+    <section class="form-intro">
+
+        <h2>RESUME GENERATED</h2>
+
+        <p>
+            Tap below to open.
+        </p>
+
+    </section>
+
+
+    <section class="form-container">
+
+        <div class="action">
+
+            <button id="openResume">
+                OPEN RESUME
+            </button>
+
+        </div>
+
+
+        <div class="form-buttons">
+
+            <button
+                type="button"
+                id="backToCertification">
+
+                ← BACK
+
+            </button>
+
+        </div>
+
+    </section>
+
+</section>
+<section id="resumePreviewScreen" style="display: none;">
+
+    <section class="form-intro">
+
+        <h2>YOUR RESUME</h2>
+
+        <p>
+            Your resume preview will appear here.
+        </p>
+
+    </section>
+
+    <section class="resume-preview">
+
+    <div class="resume-header">
+
+    <div class="resume-profile-details">
+
+        <h1 id="previewName">YOUR NAME</h1>
+
+        <h2 id="previewRole">Your Role</h2>
+
+        <p id="previewContact">
+            email • phone • location • LinkedIn
+        </p>
+
+    </div>
+
+
+    <div
+        id="previewPictureBox"
+        class="preview-picture-box"
+        style="display: none;"
+    >
+
+        <img
+            id="previewPicture"
+            src=""
+            alt="Profile Picture"
+        >
+
+    </div>
+
+</div>
+
+    <div class="resume-section">
+
+        <h3>SUMMARY</h3>
+
+        <p id="previewSummary">
+            Your summary will appear here.
+        </p>
+
+    </div>
+
+
+    <div class="resume-section">
+
+        <h3>EDUCATION</h3>
+
+        <div id="previewEducation">
+            Your education will appear here.
+        </div>
+
+    </div>
+
+
+    <div class="resume-section">
+
+        <h3>SKILLS</h3>
+
+        <p id="previewSkills">
+            Your skills will appear here.
+        </p>
+
+    </div>
+
+
+    <div class="resume-section">
+
+        <h3>EXPERIENCE</h3>
+
+        <div id="previewExperience">
+            Your experience will appear here.
+        </div>
+
+    </div>
+    <div class="resume-section">
+
+    <h3>CERTIFICATIONS</h3>
+
+    <div id="previewCertifications">
+        Your certifications will appear here.
+    </div>
+
+</div>
+
+</section>
+
+
+<div class="resume-download-area">
+
+    <button id="downloadResumePNG">
+        DOWNLOAD RESUME AS PNG
+    </button>
+
+</div>
+
+</section>
+</section>
+
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="resume.js"></script>
+
+</body>
+
+</html>
