@@ -1849,3 +1849,80 @@ button:hover {
 #downloadResumePNG {
     min-width: 240px;
 }
+
+/* =====================================================
+   DESKTOP RESUME PREVIEW — CLEAN, PHONE-LIKE LAYOUT
+   ===================================================== */
+
+@media (min-width: 851px) {
+
+    #resumePreviewScreen .resume-preview {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "header"
+            "summary"
+            "education"
+            "skills"
+            "experience"
+            "certifications";
+
+        width: 100%;
+        max-width: 595px;
+        min-height: 842px;
+        margin: 30px auto;
+        padding: 42px 40px;
+
+        column-gap: 0;
+        row-gap: 26px;
+        align-content: start;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-header {
+        grid-area: header;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-section:nth-child(2) {
+        grid-area: summary;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-section:nth-child(3) {
+        grid-area: education;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-section:nth-child(4) {
+        grid-area: skills;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-section:nth-child(5) {
+        grid-area: experience;
+    }
+
+    #resumePreviewScreen .resume-preview > .resume-section:nth-child(6) {
+        grid-area: certifications;
+    }
+
+    #resumePreviewScreen .resume-preview .resume-section h3 {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        margin-bottom: 9px;
+    }
+
+    #resumePreviewScreen .resume-preview .resume-section p,
+    #resumePreviewScreen .resume-preview .resume-section div {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    #resumePreviewScreen #previewName {
+        font-size: 27px;
+    }
+
+    #resumePreviewScreen #previewRole {
+        font-size: 15px;
+    }
+
+    #resumePreviewScreen #previewContact {
+        font-size: 11px;
+        line-height: 1.8;
+    }
+}

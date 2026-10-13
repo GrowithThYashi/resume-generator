@@ -1896,39 +1896,108 @@ if (resumeData.certifications.length > 0) {
         "block";
 
 };
-document.getElementById("backToGenerated").onclick = function () {
+const backToGeneratedButton = document.getElementById("backToGenerated");
+
+if (backToGeneratedButton) {
+    backToGeneratedButton.onclick = function () {
 
     document.getElementById("resumePreviewScreen").style.display = "none";
 
     document.getElementById("resumeReadyScreen").style.display = "block";
+    
 
 };
-// =============================
-// DOWNLOAD RESUME AS PNG
-// =============================
+}
+ 
+/* =============================
+   DOWNLOAD RESUME AS PNG
+============================= */
 
-document.getElementById("downloadResumePNG").onclick = function () {
+const downloadButton = document.getElementById("downloadResumePNG");
 
-    const resume = document.querySelector(
-        "#resumePreviewScreen .resume-preview"
-    );
+if (downloadButton) {
+    downloadButton.addEventListener("click", async function (event) {
+        event.preventDefault();
 
-    html2canvas(resume, {
-        scale: 2,
-        backgroundColor: "#ffffff",
-        useCORS: true,
-        logging: false
-    }).then(function (canvas) {
+        const resume = document.querySelector(
+            "#resumePreviewScreen .resume-preview"
+        );
 
-        const link = document.createElement("a");
+        if (!resume) {
+            alert("Resume preview not found. Please open your resume first.");
+            return;
+        }
 
-        link.download =
-            (resumeData.fullName || "Resume") + ".png";
+        if (typeof window.html2canvas !== "function") {
+            alert(
+                "The PNG library did not load. Check your internet connection and refresh the page."
+            );
+            return;
+        }
 
-        link.href = canvas.toDataURL("image/png");
+        downloadButton.disabled = true;
+        downloadButton.textContent = "PREPARING PNG...";
 
-        link.click();
+        let downloadUrl = null;
 
+        try {
+            // Convert the visible resume into a canvas image.
+            const canvas = await window.html2canvas(resume, {
+                scale: 2,
+                backgroundColor: "#ffffff",
+                useCORS: true,
+                allowTaint: false,
+                logging: false
+            });
+
+            // Convert the canvas into an actual PNG file.
+            const pngBlob = await new Promise((resolve, reject) => {
+                canvas.toBlob(function (blob) {
+                    if (blob) {
+                        resolve(blob);
+                    } else {
+                        reject(new Error("Could not create the PNG file."));
+                    }
+                }, "image/png");
+            });
+
+            // Prepare a safe filename.
+            const name = String(
+                resumeData.fullName || "Resume"
+            )
+                .trim()
+                .replace(/[\\/:*?"<>|]/g, "-") || "Resume";
+
+            // Create a temporary URL for the PNG file.
+            downloadUrl = URL.createObjectURL(pngBlob);
+
+            // Trigger the browser's download mechanism.
+            const link = document.createElement("a");
+            link.href = downloadUrl;
+            link.download = name + ".png";
+            link.style.display = "none";
+
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+
+        } catch (error) {
+            console.error("PNG download failed:", error);
+
+            alert(
+                "PNG download failed. Please check the browser console for the error."
+            );
+
+        } finally {
+            // Keep the temporary URL alive briefly for the download.
+            if (downloadUrl) {
+                setTimeout(() => {
+                    URL.revokeObjectURL(downloadUrl);
+                }, 1000);
+            }
+
+            downloadButton.disabled = false;
+            downloadButton.textContent = "DOWNLOAD RESUME AS PNG";
+        }
     });
-
-};
+}
